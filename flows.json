@@ -1,0 +1,2787 @@
+[
+    {
+        "id": "80120896a60cca65",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "90c625d5ae23797a",
+        "type": "tab",
+        "label": "Vaha-MySQL",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b7dfbe7566583b82",
+        "type": "tab",
+        "label": "Bruto",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ce676726a435a63c",
+        "type": "group",
+        "z": "b7dfbe7566583b82",
+        "name": "Sprava Cloud DB (MySQL v Azure)",
+        "style": {
+            "stroke": "none",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "b74086539b49f098",
+            "bb75c95e7d5fe130",
+            "1b0d838641f1d8f2",
+            "fa1069fae2bb923b",
+            "c346be6ddbdb1573",
+            "ceb90a14c5439181",
+            "d9107d77028ed1dd",
+            "9a549b581d2675b7",
+            "fa412925a4f2cf47",
+            "451fb4d608199b3d",
+            "d6eee30cd20e7e57"
+        ],
+        "x": 794,
+        "y": 619,
+        "w": 712,
+        "h": 222,
+        "info": "RAW: 30s data z vahy\nAVG: 3min ocistene data od zakmitov\nSTAV: priebezna vaha v zasobniku\n    T+ : cas nasypania\n    Q+ : mnozstvo nasypania\n    T- : cas vysypania\n    Q- : mnozstvo vysypania \nDEN: denne aggregaty\n    T+ : zaciatok smeny\n    Q+ : mnozstvo v zasobniku\n    T- : cas vysypania\n    Q- : koniec smeny\n    QD : denna davka spracovania\nLOG: notifikacie\n"
+    },
+    {
+        "id": "1d8a17f638fdb4ca",
+        "type": "group",
+        "z": "b7dfbe7566583b82",
+        "name": "Sprava Lokalnych DB (SQLite)",
+        "style": {
+            "stroke": "none",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "b3139745f39075c4",
+            "786adf4b2ece6f83",
+            "59cd42c5955367eb",
+            "13b1c20cc5669332",
+            "7f0e91159ac33b3f",
+            "7afa4b7b8fb7aad3",
+            "434dadce353fa8ba",
+            "be8e67a4cf6d3c27",
+            "fc94f3fe5989a060",
+            "0610ae6c81986838",
+            "a7ca0cb415f6a7f9"
+        ],
+        "x": 34,
+        "y": 619,
+        "w": 732,
+        "h": 222,
+        "info": "RAW: 30s data z vahy\nAVG: 3min ocistene data od zakmitov\nSTAV: priebezna vaha v zasobniku\n    T+ : cas nasypania\n    Q+ : mnozstvo nasypania\n    T- : cas vysypania\n    Q- : mnozstvo vysypania \nDEN: denne aggregaty\n    T+ : zaciatok smeny\n    Q+ : mnozstvo v zasobniku\n    T- : cas vysypania\n    Q- : koniec smeny\n    QD : denna davka spracovania\nLOG: notifikacie\n"
+    },
+    {
+        "id": "eda5c0cf97b87de6",
+        "type": "group",
+        "z": "b7dfbe7566583b82",
+        "name": "Asynchronny prenos dat z LocDB => CloudDB ",
+        "style": {
+            "stroke": "none",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "ed80e43acfe142f5",
+            "20ed84e613cbc3d6",
+            "00c01e817f16bcc0",
+            "f6f35c72b6934fed",
+            "1b107cc176afbdc7",
+            "33477994f2792078",
+            "c0f381662e7f7965",
+            "634571733446c20d",
+            "4c7bd8635e626223"
+        ],
+        "x": 34,
+        "y": 519,
+        "w": 1412,
+        "h": 82
+    },
+    {
+        "id": "f2359fb254d6b581",
+        "type": "group",
+        "z": "b7dfbe7566583b82",
+        "name": "Generovanie udajov vahy",
+        "style": {
+            "stroke": "none",
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "9219f16fc1de8ff9",
+            "7a27750616abd0cc",
+            "df517f4e15fd6af8"
+        ],
+        "x": 34,
+        "y": 99,
+        "w": 332,
+        "h": 122
+    },
+    {
+        "id": "9f17c4bcb0b3fe01",
+        "type": "group",
+        "z": "b7dfbe7566583b82",
+        "name": "Lokalne zobrazovanie dat ",
+        "style": {
+            "stroke": "none",
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "3c9c30fc2c4814db",
+            "096bbf7003bfdcc9",
+            "e335c835909f248b",
+            "5e7d28eb5d6b1c40",
+            "cab3be3eac8d64f4"
+        ],
+        "x": 594,
+        "y": 299,
+        "w": 612,
+        "h": 142
+    },
+    {
+        "id": "4e99e5836ef4845f",
+        "type": "group",
+        "z": "b7dfbe7566583b82",
+        "name": "Kanaly",
+        "style": {
+            "label": true,
+            "stroke": "none",
+            "fill": "#dbcbe7"
+        },
+        "nodes": [
+            "e56a7347eff9c9c9",
+            "f00cde47e857bdbd",
+            "1f3652a0f49b661c",
+            "ac65fd7b44a872cf",
+            "b5f9ca49285f6b40",
+            "9d122da9b23d9f29",
+            "2d31153869ec9093"
+        ],
+        "x": 1294,
+        "y": 19,
+        "w": 412,
+        "h": 262
+    },
+    {
+        "id": "8362ac1ac8c09536",
+        "type": "group",
+        "z": "b7dfbe7566583b82",
+        "name": "",
+        "style": {
+            "stroke": "none",
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "826afe79285f0ad1",
+            "3f9cfc60d85430a9",
+            "83e35de1eedf9b85",
+            "4ef5af2fe9e1815f",
+            "bc7ef9ad2fd09590",
+            "53c80384ee0bbb15",
+            "e1831cea9c05b243",
+            "3ae5ba61b74906e1",
+            "3e2e9bce816d9c27"
+        ],
+        "x": 554,
+        "y": 99,
+        "w": 712,
+        "h": 182
+    },
+    {
+        "id": "c3f9465f061cb704",
+        "type": "serial-port",
+        "serialport": "/dev/ttyS3",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\r\\n",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "cb40bff17d67f7bf",
+        "type": "MySQLdatabase",
+        "name": "SQL APP Bruto",
+        "host": "ler03.vas-server.cz",
+        "port": "3306",
+        "db": "appbrutto_2",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "7a70dad4874570e6",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "ler03.vas-server.cz",
+        "port": "3306",
+        "db": "appbrutto_2",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "1a400b2631ac25ba",
+        "type": "sqlitedb",
+        "db": "/home/orangepi/Database/VahyLoc.lite",
+        "mode": "RWC"
+    },
+    {
+        "id": "fc624345ab8039cc",
+        "type": "sqlitedb",
+        "db": "/home/orangepi/Database/VahyBrutto.lite",
+        "mode": "RWC"
+    },
+    {
+        "id": "ea7856fb2b28b534",
+        "type": "ui_tab",
+        "name": "Brutto",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9b52064.a1d3af8",
+        "type": "ui_tab",
+        "name": "Zemiaky",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9ce38a60cc27daf4",
+        "type": "ui_group",
+        "name": "Simulacia",
+        "tab": "ea7856fb2b28b534",
+        "order": 1,
+        "disp": true,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2bbb488f1a1e1f98",
+        "type": "ui_group",
+        "name": "Vazenie",
+        "tab": "ea7856fb2b28b534",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4eac9196c0dff14c",
+        "type": "ui_group",
+        "name": "Notifikacie",
+        "tab": "ea7856fb2b28b534",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "219dacee.934404",
+        "type": "ui_group",
+        "name": "Vstup. simulacia",
+        "tab": "9b52064.a1d3af8",
+        "order": 1,
+        "disp": true,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7580151286438ec0",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ce7f0ae79466471f",
+        "type": "function",
+        "z": "80120896a60cca65",
+        "name": "Ak je tam OK",
+        "func": "if (msg.payload.includes(\"Off\")  )\n{\n    msg.payload = 'Bolo off'\n} else {\n    msg.payload= 'Bolo on'\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "9523d38b2ccbdda8"
+            ]
+        ]
+    },
+    {
+        "id": "9523d38b2ccbdda8",
+        "type": "serial out",
+        "z": "80120896a60cca65",
+        "name": "Serial Out",
+        "serial": "c3f9465f061cb704",
+        "x": 580,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "41eca85943d2ab59",
+        "type": "debug",
+        "z": "80120896a60cca65",
+        "d": true,
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "6c77cdc09104bd9d",
+        "type": "serial out",
+        "z": "80120896a60cca65",
+        "name": "Serial Out",
+        "serial": "c3f9465f061cb704",
+        "x": 960,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "91ec6165705aa7f7",
+        "type": "inject",
+        "z": "80120896a60cca65",
+        "name": "Zijem",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Zjem",
+        "payloadType": "str",
+        "x": 790,
+        "y": 520,
+        "wires": [
+            [
+                "6c77cdc09104bd9d"
+            ]
+        ]
+    },
+    {
+        "id": "f7876d1b6f63d230",
+        "type": "mysql",
+        "z": "80120896a60cca65",
+        "d": true,
+        "mydb": "cb40bff17d67f7bf",
+        "name": "APP BRUTO",
+        "x": 970,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4b49b48994a80e3",
+        "type": "function",
+        "z": "80120896a60cca65",
+        "name": "INSERT statement",
+        "func": "msg.topic = \"INSERT into new_scale_data(id_scale, row_1,date) VALUES (3,'\"+msg.payload+\"',now())\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 420,
+        "wires": [
+            [
+                "f7876d1b6f63d230"
+            ]
+        ]
+    },
+    {
+        "id": "302de24f9c778c96",
+        "type": "catch",
+        "z": "80120896a60cca65",
+        "name": "chzba",
+        "scope": null,
+        "uncaught": false,
+        "x": 730,
+        "y": 600,
+        "wires": [
+            [
+                "5ce1f354a0b1d89e"
+            ]
+        ]
+    },
+    {
+        "id": "5ce1f354a0b1d89e",
+        "type": "debug",
+        "z": "80120896a60cca65",
+        "name": "Logovanie chyb",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f82aed15.9f1a98",
+        "type": "q-gate",
+        "z": "80120896a60cca65",
+        "name": "q-gate",
+        "controlTopic": "control",
+        "defaultState": "queueing",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "queueCmd": "queue",
+        "defaultCmd": "default",
+        "triggerCmd": "trigger",
+        "flushCmd": "flush",
+        "resetCmd": "reset",
+        "peekCmd": "peek",
+        "dropCmd": "drop",
+        "statusCmd": "status",
+        "maxQueueLength": "100",
+        "keepNewest": false,
+        "qToggle": false,
+        "persist": false,
+        "x": 610,
+        "y": 740,
+        "wires": [
+            [
+                "ae4b0558.378d8",
+                "b6aba10c.b691f"
+            ]
+        ]
+    },
+    {
+        "id": "6ec96b3b.ec5c14",
+        "type": "debug",
+        "z": "80120896a60cca65",
+        "name": "OK",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "4ef6d24.5459eac",
+        "type": "inject",
+        "z": "80120896a60cca65",
+        "name": "Retry",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "peek",
+        "payloadType": "str",
+        "x": 370,
+        "y": 920,
+        "wires": [
+            [
+                "a20949f9.306a48"
+            ]
+        ]
+    },
+    {
+        "id": "a8381ab7.d1949",
+        "type": "link out",
+        "z": "80120896a60cca65",
+        "name": "",
+        "links": [
+            "5a2f45b9.929cc4"
+        ],
+        "x": 935,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "5a2f45b9.929cc4",
+        "type": "link in",
+        "z": "80120896a60cca65",
+        "name": "",
+        "links": [
+            "a8381ab7.d1949"
+        ],
+        "x": 295,
+        "y": 800,
+        "wires": [
+            [
+                "1ec5d8f7.0e6ae7"
+            ]
+        ]
+    },
+    {
+        "id": "1ec5d8f7.0e6ae7",
+        "type": "function",
+        "z": "80120896a60cca65",
+        "name": "get next",
+        "func": "node.send({topic: \"control\", payload: \"drop\"})\nmsg.topic = \"control\"\nmsg.payload = \"peek\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 800,
+        "wires": [
+            [
+                "f82aed15.9f1a98"
+            ]
+        ]
+    },
+    {
+        "id": "672111d5.4f229",
+        "type": "inject",
+        "z": "80120896a60cca65",
+        "name": "Simulate internet up",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "internet",
+        "payload": "up",
+        "payloadType": "str",
+        "x": 370,
+        "y": 1500,
+        "wires": [
+            [
+                "edb0af2.fd1645"
+            ]
+        ]
+    },
+    {
+        "id": "bc5fa483.adc8f",
+        "type": "inject",
+        "z": "80120896a60cca65",
+        "name": "Simulate internet down",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "internet",
+        "payload": "down",
+        "payloadType": "str",
+        "x": 370,
+        "y": 1540,
+        "wires": [
+            [
+                "edb0af2.fd1645"
+            ]
+        ]
+    },
+    {
+        "id": "edb0af2.fd1645",
+        "type": "join",
+        "z": "80120896a60cca65",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 610,
+        "y": 1520,
+        "wires": [
+            [
+                "b7feed8e.7caf68"
+            ]
+        ]
+    },
+    {
+        "id": "b0c78702.b01988",
+        "type": "change",
+        "z": "80120896a60cca65",
+        "name": "topic:data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "data",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1340,
+        "wires": [
+            [
+                "edb0af2.fd1645"
+            ]
+        ]
+    },
+    {
+        "id": "b7feed8e.7caf68",
+        "type": "switch",
+        "z": "80120896a60cca65",
+        "name": "Data message?",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "data",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 1600,
+        "wires": [
+            [
+                "d96e80be.41aff"
+            ]
+        ]
+    },
+    {
+        "id": "d96e80be.41aff",
+        "type": "switch",
+        "z": "80120896a60cca65",
+        "name": "OK/Fail?",
+        "property": "payload.internet",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "up",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 700,
+        "y": 1600,
+        "wires": [
+            [
+                "6ec96b3b.ec5c14",
+                "a8381ab7.d1949"
+            ],
+            [
+                "ea9c5a96.2dcfe8",
+                "37735513.24d77a"
+            ]
+        ]
+    },
+    {
+        "id": "ea9c5a96.2dcfe8",
+        "type": "debug",
+        "z": "80120896a60cca65",
+        "name": "FAIL",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "ae4b0558.378d8",
+        "type": "change",
+        "z": "80120896a60cca65",
+        "name": "Close gate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "gate_control",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "close",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 880,
+        "wires": [
+            [
+                "a20949f9.306a48"
+            ]
+        ]
+    },
+    {
+        "id": "a78ce065.5c9b68",
+        "type": "change",
+        "z": "80120896a60cca65",
+        "name": "Open gate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "gate_control",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "open",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 960,
+        "wires": [
+            [
+                "a20949f9.306a48"
+            ]
+        ]
+    },
+    {
+        "id": "e5978b76.2fb2b",
+        "type": "link in",
+        "z": "80120896a60cca65",
+        "name": "",
+        "links": [
+            "b6aba10c.b691f"
+        ],
+        "x": 75,
+        "y": 1160,
+        "wires": [
+            [
+                "49caf79107a126b3",
+                "2b5ea8330a515cb9"
+            ]
+        ]
+    },
+    {
+        "id": "b6aba10c.b691f",
+        "type": "link out",
+        "z": "80120896a60cca65",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "e5978b76.2fb2b"
+        ],
+        "x": 815,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "37735513.24d77a",
+        "type": "link out",
+        "z": "80120896a60cca65",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "7f6b726d.0cab2c"
+        ],
+        "x": 935,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "7f6b726d.0cab2c",
+        "type": "link in",
+        "z": "80120896a60cca65",
+        "name": "",
+        "links": [
+            "37735513.24d77a"
+        ],
+        "x": 295,
+        "y": 960,
+        "wires": [
+            [
+                "a78ce065.5c9b68"
+            ]
+        ]
+    },
+    {
+        "id": "5d647435.11ea14",
+        "type": "comment",
+        "z": "80120896a60cca65",
+        "name": "Processed ok",
+        "info": "",
+        "x": 830,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "cda552d1.59b25",
+        "type": "comment",
+        "z": "80120896a60cca65",
+        "name": "Failed",
+        "info": "",
+        "x": 1010,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "6777d4.5738d02c",
+        "type": "comment",
+        "z": "80120896a60cca65",
+        "name": "Replace this with your message processing, sending a message to the Fail or Success outputs",
+        "info": "",
+        "x": 550,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "d1158219.184d38",
+        "type": "comment",
+        "z": "80120896a60cca65",
+        "name": "Messages to be processed come in here",
+        "info": "",
+        "x": 220,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "4681668e.9d5cd8",
+        "type": "comment",
+        "z": "80120896a60cca65",
+        "name": "Feed messages to be queued in here and remove Inject node",
+        "info": "",
+        "x": 470,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "177f73a0.c29e2c",
+        "type": "status",
+        "z": "80120896a60cca65",
+        "name": "",
+        "scope": [
+            "f82aed15.9f1a98"
+        ],
+        "x": 360,
+        "y": 1020,
+        "wires": [
+            [
+                "b95b8054.e3339"
+            ]
+        ]
+    },
+    {
+        "id": "b95b8054.e3339",
+        "type": "function",
+        "z": "80120896a60cca65",
+        "name": "Queue empty?",
+        "func": "// expects msg.status.text in form \"queuing: <number>\"\n// sends a message if queue is empty\nif (parseInt(msg.status.text.split(\":\")[1]) !== 0) {\n    msg = null\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 1020,
+        "wires": [
+            [
+                "a78ce065.5c9b68"
+            ]
+        ]
+    },
+    {
+        "id": "e72ba10d.c92638",
+        "type": "comment",
+        "z": "80120896a60cca65",
+        "name": "Set this to appropriate retry interval",
+        "info": "",
+        "x": 350,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "a20949f9.306a48",
+        "type": "gate",
+        "z": "80120896a60cca65",
+        "name": "",
+        "controlTopic": "gate_control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "persist": false,
+        "x": 730,
+        "y": 920,
+        "wires": [
+            [
+                "f82aed15.9f1a98"
+            ]
+        ]
+    },
+    {
+        "id": "49caf79107a126b3",
+        "type": "debug",
+        "z": "80120896a60cca65",
+        "name": "Logika Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "9257b8cb55d1f7d3",
+        "type": "mysql",
+        "z": "80120896a60cca65",
+        "mydb": "cb40bff17d67f7bf",
+        "name": "APP BRUTO Insert",
+        "x": 430,
+        "y": 1240,
+        "wires": [
+            [
+                "b0c78702.b01988",
+                "3e35ab2c4168c7f7"
+            ]
+        ]
+    },
+    {
+        "id": "2b5ea8330a515cb9",
+        "type": "function",
+        "z": "80120896a60cca65",
+        "name": "INSERT statement",
+        "func": "msg.topic = \"INSERT into new_scale_data(id_scale, row_1,date) VALUES (3,'\"+msg.payload+\"',now())\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 1240,
+        "wires": [
+            [
+                "9257b8cb55d1f7d3"
+            ]
+        ]
+    },
+    {
+        "id": "7f4c3521ad86115a",
+        "type": "function",
+        "z": "80120896a60cca65",
+        "name": "SELECT statement",
+        "func": "msg.topic = \"SELECT id_scale,row_1,date FROM new_scale_data WHERE id_scale=3 ORDER BY date DESC LIMIT 1\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1360,
+        "wires": [
+            [
+                "921c9baf7485c51e"
+            ]
+        ]
+    },
+    {
+        "id": "921c9baf7485c51e",
+        "type": "mysql",
+        "z": "80120896a60cca65",
+        "mydb": "cb40bff17d67f7bf",
+        "name": "APP BRUTO",
+        "x": 690,
+        "y": 1360,
+        "wires": [
+            [
+                "b994133eebfdd7a6"
+            ]
+        ]
+    },
+    {
+        "id": "3e35ab2c4168c7f7",
+        "type": "delay",
+        "z": "80120896a60cca65",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 1340,
+        "wires": [
+            [
+                "7f4c3521ad86115a"
+            ]
+        ]
+    },
+    {
+        "id": "7ff1b9d23587c994",
+        "type": "inject",
+        "z": "80120896a60cca65",
+        "name": "Ahoj Andrej",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Ahoj Andrej12",
+        "payloadType": "str",
+        "x": 670,
+        "y": 1740,
+        "wires": [
+            [
+                "37735513.24d77a"
+            ]
+        ]
+    },
+    {
+        "id": "f8ad53d4fdd8e402",
+        "type": "catch",
+        "z": "80120896a60cca65",
+        "name": "",
+        "scope": [
+            "9257b8cb55d1f7d3"
+        ],
+        "uncaught": false,
+        "x": 630,
+        "y": 1680,
+        "wires": [
+            [
+                "37735513.24d77a"
+            ]
+        ]
+    },
+    {
+        "id": "b994133eebfdd7a6",
+        "type": "function",
+        "z": "80120896a60cca65",
+        "name": "function 1",
+        "func": "\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 1460,
+        "wires": [
+            [
+                "a8381ab7.d1949"
+            ]
+        ]
+    },
+    {
+        "id": "472889d087433dfa",
+        "type": "serial in",
+        "z": "80120896a60cca65",
+        "name": "Serial in",
+        "serial": "c3f9465f061cb704",
+        "x": 220,
+        "y": 180,
+        "wires": [
+            [
+                "ce7f0ae79466471f",
+                "41eca85943d2ab59",
+                "d4b49b48994a80e3",
+                "f82aed15.9f1a98"
+            ]
+        ]
+    },
+    {
+        "id": "b74086539b49f098",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "g": "ce676726a435a63c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "bb75c95e7d5fe130",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "d": true,
+        "g": "ce676726a435a63c",
+        "name": "Notifikacie",
+        "func": "msg.topic = \"CREATE TABLE Notifikacie( timestamp BIGINT NOT NULL, sprava TEXT NOT NULL ); \";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 800,
+        "wires": [
+            [
+                "c346be6ddbdb1573"
+            ]
+        ]
+    },
+    {
+        "id": "1b0d838641f1d8f2",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "ce676726a435a63c",
+        "name": "VahaData",
+        "func": "//msg.topic = \"CREATE TABLE Clean( cas INT NOT NULL, den INT NOT NULL, hodina INT NOT NULL, vaha FLOAT NOT NULL, check_out INT NOT NULL )\"\n\nmsg.topic = \"CREATE TABLE VahaData( \\\nid_scale_data INT NOT NULL AUTO_INCREMENT, \\\nid_Loc INT NOT NULL,  \\\nid_scale INT NOT NULL, \\\ntimestamp BIGINT NOT NULL, \\\nrow_1 TEXT NOT NULL, \\\nrow_2 TEXT NOT NULL, \\\nrow_3 TEXT NOT NULL, \\\nrow_4 TEXT NOT NULL, \\\nrow_5 TEXT NOT NULL, \\\nrow_6 FLOAT NOT NULL, \\\nrow_7 FLOAT NOT NULL, \\\nrow_8 FLOAT NOT NULL, \\\nrow_9 FLOAT NOT NULL, \\\nrow_10 VARCHAR(10), \\\nrow_11 VARCHAR(10), \\\nrow_12 VARCHAR(10), \\\nrow_13 VARCHAR(10),  \\\nrow_14 TEXT NOT NULL, \\\nrow_15 TEXT NOT NULL, \\\nrow_16 TEXT NOT NULL, \\\nPRIMARY KEY(id_scale_data) ) \";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 740,
+        "wires": [
+            [
+                "c346be6ddbdb1573"
+            ]
+        ]
+    },
+    {
+        "id": "fa1069fae2bb923b",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "ce676726a435a63c",
+        "name": "CreateTbl",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 900,
+        "y": 760,
+        "wires": [
+            [
+                "bb75c95e7d5fe130",
+                "1b0d838641f1d8f2"
+            ]
+        ],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "c346be6ddbdb1573",
+        "type": "mysql",
+        "z": "b7dfbe7566583b82",
+        "d": true,
+        "g": "ce676726a435a63c",
+        "mydb": "7a70dad4874570e6",
+        "name": "CloudBrutto",
+        "x": 1410,
+        "y": 740,
+        "wires": [
+            [
+                "b74086539b49f098"
+            ]
+        ]
+    },
+    {
+        "id": "ceb90a14c5439181",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "ce676726a435a63c",
+        "name": "Clean Tbl",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 900,
+        "y": 660,
+        "wires": [
+            [
+                "d9107d77028ed1dd"
+            ]
+        ]
+    },
+    {
+        "id": "d9107d77028ed1dd",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "ce676726a435a63c",
+        "name": "Clean All",
+        "func": "msg.payload = \"DELETE FROM VahaData;\\nDELETE FROM Notifikacie;\\n\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 660,
+        "wires": [
+            [
+                "9a549b581d2675b7"
+            ]
+        ]
+    },
+    {
+        "id": "9a549b581d2675b7",
+        "type": "split",
+        "z": "b7dfbe7566583b82",
+        "g": "ce676726a435a63c",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "",
+        "x": 1170,
+        "y": 680,
+        "wires": [
+            [
+                "fa412925a4f2cf47"
+            ]
+        ]
+    },
+    {
+        "id": "fa412925a4f2cf47",
+        "type": "change",
+        "z": "b7dfbe7566583b82",
+        "g": "ce676726a435a63c",
+        "name": "topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 680,
+        "wires": [
+            [
+                "c346be6ddbdb1573"
+            ]
+        ]
+    },
+    {
+        "id": "451fb4d608199b3d",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "ce676726a435a63c",
+        "name": "Drop Tbl",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 900,
+        "y": 700,
+        "wires": [
+            [
+                "d6eee30cd20e7e57"
+            ]
+        ]
+    },
+    {
+        "id": "d6eee30cd20e7e57",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "ce676726a435a63c",
+        "name": "Drop ALL",
+        "func": "msg.payload = \"DROP TABLE VahaData;\\nDROP TABLE Notifikacie;\\n\"\nmsg.payload = \"DROP TABLE VahaData;\\n\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 700,
+        "wires": [
+            [
+                "9a549b581d2675b7"
+            ]
+        ]
+    },
+    {
+        "id": "b3139745f39075c4",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "59cd42c5955367eb",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "d": true,
+        "g": "1d8a17f638fdb4ca",
+        "name": "Notifikacie",
+        "func": "msg.topic = \"CREATE TABLE Notifikacie( timestamp INT NOT NULL, sprava TEXT NOT NULL )\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 800,
+        "wires": [
+            [
+                "786adf4b2ece6f83"
+            ]
+        ]
+    },
+    {
+        "id": "13b1c20cc5669332",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "name": "CreateTbl",
+        "func": "msg.topic = \"CREATE TABLE VahaData( \\\nid_scale_data int NOT NULL, \\\nid_scale int NOT NULL, \\\ntimestamp INT NOT NULL, \\\ndatum TEXT NOT NULL, \\\ncas TEXT NOT NULL, \\\nprodukt TEXT NOT NULL, \\\nsklad TEXT NOT NULL, \\\nartikelPKH TEXT NOT NULL, \\\nkusov INT NOT NULL, \\\nbrutto TEXT NOT NULL, \\\nnetto TEXT NOT NULL, \\\ntara TEXT NOT NULL, \\\nna1 INT NOT NULL, \\\nna2 INT NOT NULL, \\\nna3 INT NOT NULL, \\\nna4 INT NOT NULL, \\\nsarza TEXT NOT NULL, \\\nkodProdukt TEXT NOT NULL, \\\noperator TEXT NOT NULL); \";\n\nreturn msg;\n\n// rowid ako autoinkrement\n\n/* \nmsg.topic = \"CREATE TABLE VahaData( \\\nid_scale_data int NOT NULL, \\\n// idLoc INT NOT NULL, \\\nid_scale int NOT NULL, \\\ntimestamp INT NOT NULL, \\\ndatum TEXT NOT NULL, \\\ncas TEXT NOT NULL, \\\nprodukt TEXT NOT NULL, \\\nsklad TEXT NOT NULL, \\\nartikelPKH TEXT NOT NULL, \\\nkusov INT NOT NULL, \\\nbrutto INT NOT NULL, \\\nnetto INT NOT NULL, \\\ntara INT NOT NULL, \\\nna1 INT NOT NULL, \\\nna2 INT NOT NULL, \\\nna3 INT NOT NULL, \\\nna4 INT NOT NULL, \\\nsarza TEXT NOT NULL, \\\nkodProdukt TEXT NOT NULL, \\\noperator TEXT NOT NULL, \\\nCONSTRAINT Raw PRIMARY KEY(idLoc) ) \";\n*/\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 740,
+        "wires": [
+            [
+                "786adf4b2ece6f83"
+            ]
+        ]
+    },
+    {
+        "id": "7f0e91159ac33b3f",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "name": "CreateTbl",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 780,
+        "wires": [
+            [
+                "59cd42c5955367eb",
+                "13b1c20cc5669332"
+            ]
+        ],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "7afa4b7b8fb7aad3",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "name": "Drop Tbl",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 700,
+        "wires": [
+            [
+                "be8e67a4cf6d3c27"
+            ]
+        ]
+    },
+    {
+        "id": "434dadce353fa8ba",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "name": "Clean Tbl",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 660,
+        "wires": [
+            [
+                "fc94f3fe5989a060"
+            ]
+        ]
+    },
+    {
+        "id": "be8e67a4cf6d3c27",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "name": "Drop ALL",
+        "func": "//msg.payload = \"DROP TABLE VahaData;\\nDROP TABLE Notifikacie;\\n\"\nmsg.payload = \"DROP TABLE VahaData;\\n\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 700,
+        "wires": [
+            [
+                "0610ae6c81986838"
+            ]
+        ]
+    },
+    {
+        "id": "fc94f3fe5989a060",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "name": "Clean All",
+        "func": "msg.payload = \"DELETE FROM VahaData;\\nDELETE FROM Notifikacie;\\n\"\nmsg.payload = \"DELETE FROM VahaData;\\n\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 660,
+        "wires": [
+            [
+                "0610ae6c81986838"
+            ]
+        ]
+    },
+    {
+        "id": "0610ae6c81986838",
+        "type": "split",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "",
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "a7ca0cb415f6a7f9"
+            ]
+        ]
+    },
+    {
+        "id": "a7ca0cb415f6a7f9",
+        "type": "change",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "name": "topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 680,
+        "wires": [
+            [
+                "786adf4b2ece6f83"
+            ]
+        ]
+    },
+    {
+        "id": "ed80e43acfe142f5",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "eda5c0cf97b87de6",
+        "name": "OK=0",
+        "func": "msg.topic = \"SELECT rowid, * FROM VahaData WHERE id_scale_data = \\\"0\\\" LIMIT 10\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 560,
+        "wires": [
+            [
+                "00c01e817f16bcc0"
+            ]
+        ]
+    },
+    {
+        "id": "20ed84e613cbc3d6",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "eda5c0cf97b87de6",
+        "name": "LocCloud",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 560,
+        "wires": [
+            [
+                "ed80e43acfe142f5"
+            ]
+        ]
+    },
+    {
+        "id": "f6f35c72b6934fed",
+        "type": "split",
+        "z": "b7dfbe7566583b82",
+        "g": "eda5c0cf97b87de6",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 550,
+        "y": 560,
+        "wires": [
+            [
+                "1b107cc176afbdc7"
+            ]
+        ]
+    },
+    {
+        "id": "1b107cc176afbdc7",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "eda5c0cf97b87de6",
+        "name": "Write CloudDB",
+        "func": "//msg.topic = \"INSERT INTO vahadata(id_scale_data, id_Loc, id_scale, timestamp, row_1, row_2, row_3, row_4, row_5, row_6, row_7, row_8, row_9, row_10, row_11, row_12, row_13, row_14, row_15, row_16) VALUES( \" + \nmsg.idLoc = msg.payload.rowid;\n\nmsg.topic = \"INSERT INTO new_scale_data( id_scale, row_1, row_2, row_3, row_4, row_5, row_6, row_7, row_8, row_9, row_10, row_11, row_12, row_13, row_14, row_15, row_16,date) VALUES( \" +\n    //msg.payload.id_scale_data + \",\" + \n    msg.payload.id_scale + \", \" +\n    \"\\\"\" + msg.payload.datum + \"\\\", \" +\n    \"\\\"\" + msg.payload.cas + \"\\\", \" +\n    \"\\\"\" + msg.payload.produkt + \"\\\", \" +\n    \"\\\"\" + msg.payload.sklad + \"\\\", \" +\n    \"\\\"\" + msg.payload.artikelPKH + \"\\\", \" +\n    \"\\\"\" + msg.payload.kusov + \"\\\", \" +\n    \"\\\"\" + msg.payload.brutto + \"\\\", \" + \n    \"\\\"\" + msg.payload.netto + \"\\\", \" + \n    \"\\\"\" + msg.payload.tara + \"\\\", \" +\n    \"\\\"\" + msg.payload.na1 + \"\\\", \" +\n    \"\\\"\" + msg.payload.na2 + \"\\\", \" +\n    \"\\\"\" + msg.payload.na3 + \"\\\", \" +\n    \"\\\"\" + msg.payload.na4 + \"\\\", \" +\n    \"\\\"\" + msg.payload.sarza + \"\\\", \" +\n    \"\\\"\" + msg.payload.kodProdukt + \"\\\", \" +\n    \"\\\"\" + msg.payload.operator + \"\\\", \" +\n    \"now()\" + \" );\";\n     \n\nreturn msg;\n\n\n/*\nmsg.topic =  \"INSERT INTO vahadata( id_Loc, id_scale, timestamp, row_1, row_2, row_3, row_4, row_5, row_6, row_7, row_8, row_9, row_10, row_11, row_12, row_13, row_14, row_15, row_16) VALUES( \" + \n    //msg.payload.id_scale_data + \",\" + \n    msg.idLoc + \", \" + \n    msg.payload.id_scale + \", \" + \n    msg.payload.timestamp + \", \" + \n    \"\\\"\" + msg.payload.datum + \"\\\", \" + \n    \"\\\"\" + msg.payload.cas + \"\\\", \" + \n    \"\\\"\" + msg.payload.produkt + \"\\\", \" + \n    \"\\\"\" + msg.payload.sklad + \"\\\", \" + \n    \"\\\"\" + msg.payload.artikelPKH + \"\\\", \" + \n    msg.payload.kusov + \", \" + \n    msg.payload.brutto + \", \" + msg.payload.netto + \", \" + msg.payload.tara + \", \" + \n    \"\\\"\" + msg.payload.na1 + \"\\\", \" + \n    \"\\\"\" + msg.payload.na2 + \"\\\", \" + \n    \"\\\"\" + msg.payload.na3 + \"\\\", \" + \n    \"\\\"\" + msg.payload.na4 + \"\\\", \" + \n    \"\\\"\" + msg.payload.sarza + \"\\\", \" + \n    \"\\\"\" + msg.payload.kodProdukt + \"\\\", \" + \n    \"\\\"\" + msg.payload.operator + \"\\\" );\";\n\nreturn msg;\n*/\n\n/*\n    I       msg.payload.id_scale_data   ---AUTOINKREMENT---\n    I       msg.payload.id_Loc          ---ID z LocDB---\n    I       msg.payload.id_scale\n    I       msg.payload.timestamp\n    T   1   msg.payload.datum\n    T   2   msg.payload.cas\n    T   3   msg.payload.product\n    T   4   msg.payload.sklad\n    T   5   msg.payload.artikelPKH\n    F   6   msg.payload.kusov\n    F   7-9 msg.payload.brutto msg.payload.netto  msg.payload.tara\n    V   10-13 msg.payload.na1, 2, 3, 4\n    T   14  msg.payload.sarza\n    T   15  msg.payload.kodProdukt \n    T   16  msg.payload.operator \n    */\n\n\n\n/*\nmsg.topic = \"INSERT INTO Objemy values ( \" + Date.now() + \", \" + maxCas + \", \" + maxVaha + \", \" + maxID + \", \" + cas + \", \" + minVaha + \", \" + msgID + \", \" + totVaha + \", \\\"0\\\" )\";\nmsg.payload[0].idLoc\n*/\n\n/* VSTUPY na msg.payload\nidLoc: id lokalnej DB\ntimestamp \nvaha\nstav: - / + / MIN / MAX\nmsg.payload = {};\nmsg.timestamp\n\nSQL VRATI idCloud\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 560,
+        "wires": [
+            [
+                "33477994f2792078",
+                "07da1acdbd010204"
+            ]
+        ]
+    },
+    {
+        "id": "33477994f2792078",
+        "type": "mysql",
+        "z": "b7dfbe7566583b82",
+        "g": "eda5c0cf97b87de6",
+        "mydb": "7a70dad4874570e6",
+        "name": "CloudBrutto",
+        "x": 890,
+        "y": 560,
+        "wires": [
+            [
+                "c0f381662e7f7965"
+            ]
+        ]
+    },
+    {
+        "id": "c0f381662e7f7965",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "eda5c0cf97b87de6",
+        "name": "OK=idCloud",
+        "func": "// msg.idCloud = msg.parts.id;\n\nmsg.idCloud = msg.parts.id\nmsg.topic = \"UPDATE VahaData SET id_scale_data = \\\"\" + msg.idCloud  +  \"\\\" WHERE rowid =  \" + msg.idLoc + \";\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 560,
+        "wires": [
+            [
+                "4c7bd8635e626223",
+                "c2290b747464912a"
+            ]
+        ]
+    },
+    {
+        "id": "634571733446c20d",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "g": "eda5c0cf97b87de6",
+        "name": "debug 66",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "9219f16fc1de8ff9",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "f2359fb254d6b581",
+        "name": "Raw",
+        "func": "var dd = new Date();\nvar ddtext = dd.toISOString();\n\nvar id_scale_data = 0;  // autoincrement v Cloude\nvar id_scale = 1;\nvar timestamp = Date.now();\nvar datum = ddtext.split(\"T\")[0];\nvar cas = ddtext.split(\"T\")[1].split(\".\")[0];\nvar produkt = \"Prod.\" + String(Math.round(10 * Math.random()));\nvar sklad =\"sklad a\";\nvar artikelPKH = \"artikel abc\";\nvar kusov = Math.round(100 * Math.random() + 10 * Math.random() + 1 * Math.random());\nvar brutto = 1000 * Math.random() + 100 * Math.random() + 10 * Math.random() ;\nvar netto = brutto - 100 * Math.random() - 10 * Math.random() ;\nvar tara = brutto - netto;\nvar na1 = \"\";\nvar na2 = \"\";\nvar na3 = \"\";\nvar na4 = \"\";\nvar sarza = String( Math.round(100 * Math.random()) )  +  \"-\"  +  String( Math.round(10 * Math.random()) );\nvar kodProdukt = \"kod produktu a\";\nvar operator = \"Milan\";\n\n// idLoc: ako autoinkrement vyuziva rowid\n\nmsg.topic = \"INSERT INTO VahaData (id_scale_data, id_scale, timestamp, datum, cas, produkt, sklad, artikelPKH, kusov, brutto, netto, tara, na1, na2, na3, na4, sarza, kodProdukt, operator) VALUES( \" +\nid_scale_data + \", \" + \n//idLoc + \", \" + \nid_scale + \", \" + \ntimestamp + \", \" + \n    \"\\\"\" + datum + \"\\\", \" +\n    \"\\\"\" + cas + \"\\\", \" +\n    \"\\\"\" + produkt + \"\\\", \" +\n    \"\\\"\" + sklad + \"\\\", \" +\n    \"\\\"\" + artikelPKH + \"\\\", \" +\nkusov + \", \" + \nbrutto + \", \" +\nnetto + \", \" +\ntara + \", \" +\n    \"\\\"\" + na1 + \"\\\", \" +\n    \"\\\"\" + na2 + \"\\\", \" +\n    \"\\\"\" + na3 + \"\\\", \" +\n    \"\\\"\" + na4 + \"\\\", \" +\n    \"\\\"\" + sarza + \"\\\", \" +\n    \"\\\"\" + kodProdukt + \"\\\", \" +\n    \"\\\"\" + operator + \"\\\"  ); \";\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 140,
+        "wires": [
+            [
+                "ae90b90330ab0548",
+                "3f9cfc60d85430a9"
+            ]
+        ]
+    },
+    {
+        "id": "7a27750616abd0cc",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "f2359fb254d6b581",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "9219f16fc1de8ff9"
+            ]
+        ]
+    },
+    {
+        "id": "cbd8fdb0ea72bb61",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "name": "debug 67",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "ae90b90330ab0548",
+        "type": "gate",
+        "z": "b7dfbe7566583b82",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "closed",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "open",
+        "statusCmd": "status",
+        "persist": false,
+        "storeName": "memory",
+        "x": 450,
+        "y": 60,
+        "wires": [
+            [
+                "6e3e2f948bd484e3"
+            ]
+        ]
+    },
+    {
+        "id": "9779463cf0518291",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "open",
+        "payloadType": "str",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "8d961e46347749dc"
+            ]
+        ]
+    },
+    {
+        "id": "e335c835909f248b",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "9f17c4bcb0b3fe01",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "3c9c30fc2c4814db",
+                "5e7d28eb5d6b1c40"
+            ]
+        ]
+    },
+    {
+        "id": "e56a7347eff9c9c9",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "4e99e5836ef4845f",
+        "name": "NotifikaciaObsluha",
+        "func": "msg.payload = msg.sprava;\nreturn msg;\n\n/* \nstatus: 0-2x\ntopic: Poplach/ Varovanie/ Oznam\npriority: Low/  Medium/ High\nsprava: popis stavu\ntimestamp\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 100,
+        "wires": [
+            [
+                "ac65fd7b44a872cf",
+                "b5f9ca49285f6b40",
+                "9d122da9b23d9f29"
+            ]
+        ]
+    },
+    {
+        "id": "f00cde47e857bdbd",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "4e99e5836ef4845f",
+        "name": "NotifikaciaLog",
+        "func": "var popis = msg.topic + msg.sprava;\nvar kedy = msg.timestamp; \n\nmsg.topic=\"INSERT INTO Notifikacie VALUES( \" + kedy  + \",\\\"\"+  popis + \"\\\")\" ;\nmsg.payload=\"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 180,
+        "wires": [
+            [
+                "1f3652a0f49b661c",
+                "2d31153869ec9093"
+            ]
+        ]
+    },
+    {
+        "id": "2d31153869ec9093",
+        "type": "mysql",
+        "z": "b7dfbe7566583b82",
+        "d": true,
+        "g": "4e99e5836ef4845f",
+        "mydb": "7a70dad4874570e6",
+        "name": "CloudBrutto",
+        "x": 1610,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "826afe79285f0ad1",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "8362ac1ac8c09536",
+        "name": "",
+        "func": "var status = msg.status;\n\nif (status >= 20) {\n    msg.topic = \"POPLACH: \";\n    msg.priority = \"High\";\n}\nelse if (status >= 10) {\n    msg.topic = \"VAROVANIE: \";\n    msg.priority = \"Medium\";\n}\nelse {\n    msg.topic = \"OZNAM: \";\n    msg.priority = \"Low\";\n}\n\nmsg.timestamp = Date.now();\n\nif (status >= 0) //-1 je ignoruj\n    return msg;\n\n/* \ntimestamp\nsprava: popis stavu\nstatus: 0-2x\n    topic: Poplach/ Varovanie/ Oznam\n    priority: Low/  Medium/ High\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 180,
+        "wires": [
+            [
+                "f00cde47e857bdbd",
+                "e56a7347eff9c9c9"
+            ]
+        ]
+    },
+    {
+        "id": "3f9cfc60d85430a9",
+        "type": "trigger",
+        "z": "b7dfbe7566583b82",
+        "g": "8362ac1ac8c09536",
+        "name": "Heartbeat",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "3",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 660,
+        "y": 180,
+        "wires": [
+            [
+                "83e35de1eedf9b85"
+            ]
+        ]
+    },
+    {
+        "id": "83e35de1eedf9b85",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "8362ac1ac8c09536",
+        "name": "StartStop",
+        "func": "var onoff = msg.payload;\n//msg.payload = {};\nif (onoff == 1)\n    {   msg.sprava = \"ŠTART MONITORINGU\";\n        msg.status = 0;\n    }\nelse\n    {   msg.sprava= \"VÝPADOK MONITORINGU\";\n        msg.status = 21;\n    }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 180,
+        "wires": [
+            [
+                "bc7ef9ad2fd09590"
+            ]
+        ]
+    },
+    {
+        "id": "4ef5af2fe9e1815f",
+        "type": "comment",
+        "z": "b7dfbe7566583b82",
+        "g": "8362ac1ac8c09536",
+        "name": "NOTIFIKACIA - POZRI POPIS",
+        "info": "Ignoruj\n    -1\nOznam:\n    0 Start monitoringu\n    \nVarovanie:\n    10\n    11 VÝPADOK ZAPISU DO DB \n    \nAlarm: \n    20 Stop\n    21 Vypadok monitoringu",
+        "x": 1100,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "bc7ef9ad2fd09590",
+        "type": "rbe",
+        "z": "b7dfbe7566583b82",
+        "g": "8362ac1ac8c09536",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "sprava",
+        "topi": "topic",
+        "x": 1010,
+        "y": 180,
+        "wires": [
+            [
+                "826afe79285f0ad1",
+                "3e2e9bce816d9c27"
+            ]
+        ]
+    },
+    {
+        "id": "53c80384ee0bbb15",
+        "type": "inject",
+        "z": "b7dfbe7566583b82",
+        "g": "8362ac1ac8c09536",
+        "name": "3s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 650,
+        "y": 240,
+        "wires": [
+            [
+                "3ae5ba61b74906e1"
+            ]
+        ]
+    },
+    {
+        "id": "e1831cea9c05b243",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "g": "8362ac1ac8c09536",
+        "name": "Iba v LocDB",
+        "func": "if (msg.payload[0][\"COUNT (*)\"] > 1)\n    {\n    msg.nezapisane = msg.payload[0][\"COUNT (*)\"]\n    msg.sprava = \"Výpadok zápisu do databázy\";\n    msg.status = 11;\n    }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 240,
+        "wires": [
+            [
+                "bc7ef9ad2fd09590"
+            ]
+        ]
+    },
+    {
+        "id": "3e2e9bce816d9c27",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "g": "8362ac1ac8c09536",
+        "name": "debug 71",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "786adf4b2ece6f83",
+        "type": "sqlite",
+        "z": "b7dfbe7566583b82",
+        "g": "1d8a17f638fdb4ca",
+        "mydb": "fc624345ab8039cc",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "LocBrutto",
+        "x": 660,
+        "y": 720,
+        "wires": [
+            [
+                "b3139745f39075c4"
+            ]
+        ],
+        "info": "/*\r\n\r\n*/\r\n\r\n\r\n/*struktura\r\nKedy\r\nKod(Status)\r\nSprava\r\nPriorita\r\nUroven\r\n*/"
+    },
+    {
+        "id": "00c01e817f16bcc0",
+        "type": "sqlite",
+        "z": "b7dfbe7566583b82",
+        "g": "eda5c0cf97b87de6",
+        "mydb": "fc624345ab8039cc",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "LocBrutto",
+        "x": 400,
+        "y": 560,
+        "wires": [
+            [
+                "f6f35c72b6934fed"
+            ]
+        ]
+    },
+    {
+        "id": "4c7bd8635e626223",
+        "type": "sqlite",
+        "z": "b7dfbe7566583b82",
+        "g": "eda5c0cf97b87de6",
+        "mydb": "fc624345ab8039cc",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "LocBrutto",
+        "x": 1200,
+        "y": 560,
+        "wires": [
+            [
+                "634571733446c20d"
+            ]
+        ]
+    },
+    {
+        "id": "6e3e2f948bd484e3",
+        "type": "sqlite",
+        "z": "b7dfbe7566583b82",
+        "mydb": "fc624345ab8039cc",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "LocBrutto",
+        "x": 580,
+        "y": 60,
+        "wires": [
+            [
+                "cbd8fdb0ea72bb61",
+                "a6fcb297b2617c93"
+            ]
+        ],
+        "info": "/*\r\n\r\n*/\r\n\r\n\r\n/*struktura\r\nKedy\r\nKod(Status)\r\nSprava\r\nPriorita\r\nUroven\r\n*/"
+    },
+    {
+        "id": "3c9c30fc2c4814db",
+        "type": "sqlite",
+        "z": "b7dfbe7566583b82",
+        "g": "9f17c4bcb0b3fe01",
+        "mydb": "fc624345ab8039cc",
+        "sqlquery": "fixed",
+        "sql": "/* SELECT  TIME(timestamp/1000,\"unixepoch\") as cas, stav as stav, ROUND(vaha,2) as vaha FROM VahaData where (stav = \"MIN\" or stav = \"MAX\") ORDER BY timestamp DESC LIMIT 20;*/\nSELECT  datum, cas, produkt, kusov, netto, ROUND(brutto,2) as brutto FROM VahaData ORDER BY timestamp DESC LIMIT 20;",
+        "name": "LocBrutto",
+        "x": 860,
+        "y": 340,
+        "wires": [
+            [
+                "096bbf7003bfdcc9"
+            ]
+        ]
+    },
+    {
+        "id": "5e7d28eb5d6b1c40",
+        "type": "sqlite",
+        "z": "b7dfbe7566583b82",
+        "g": "9f17c4bcb0b3fe01",
+        "mydb": "fc624345ab8039cc",
+        "sqlquery": "fixed",
+        "sql": "SELECT TIME(timestamp/1000,\"unixepoch\") as Cas, sprava as Sprava FROM Notifikacie ORDER BY TIMESTAMP DESC LIMIT 20;",
+        "name": "Notifikacie",
+        "x": 870,
+        "y": 400,
+        "wires": [
+            [
+                "cab3be3eac8d64f4"
+            ]
+        ]
+    },
+    {
+        "id": "1f3652a0f49b661c",
+        "type": "sqlite",
+        "z": "b7dfbe7566583b82",
+        "d": true,
+        "g": "4e99e5836ef4845f",
+        "mydb": "fc624345ab8039cc",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Notifikacie",
+        "x": 1590,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ae5ba61b74906e1",
+        "type": "sqlite",
+        "z": "b7dfbe7566583b82",
+        "g": "8362ac1ac8c09536",
+        "mydb": "fc624345ab8039cc",
+        "sqlquery": "fixed",
+        "sql": "/* SELECT  TIME(timestamp/1000,\"unixepoch\") as cas, stav as stav, ROUND(vaha,2) as vaha FROM VahaData where (stav = \"MIN\" or stav = \"MAX\") ORDER BY timestamp DESC LIMIT 20;*/\nSELECT  COUNT (*) FROM VahaData WHERE id_scale_data = \"0\" ;",
+        "name": "LocBrutto",
+        "x": 800,
+        "y": 240,
+        "wires": [
+            [
+                "e1831cea9c05b243"
+            ]
+        ]
+    },
+    {
+        "id": "df517f4e15fd6af8",
+        "type": "ui_button",
+        "z": "b7dfbe7566583b82",
+        "g": "f2359fb254d6b581",
+        "name": "",
+        "group": "9ce38a60cc27daf4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Zapis",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "9219f16fc1de8ff9"
+            ]
+        ]
+    },
+    {
+        "id": "8d961e46347749dc",
+        "type": "ui_switch",
+        "z": "b7dfbe7566583b82",
+        "name": "LinkaOnOff",
+        "label": "Opakovane",
+        "tooltip": "",
+        "group": "9ce38a60cc27daf4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "control",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "open",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "close",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 270,
+        "y": 60,
+        "wires": [
+            [
+                "ae90b90330ab0548"
+            ]
+        ]
+    },
+    {
+        "id": "9d122da9b23d9f29",
+        "type": "ui_audio",
+        "z": "b7dfbe7566583b82",
+        "d": true,
+        "g": "4e99e5836ef4845f",
+        "name": "audio",
+        "group": "219dacee.934404",
+        "voice": "Microsoft Lukas Online (Natural) - Slovak (Slovakia)",
+        "always": true,
+        "x": 1610,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b5f9ca49285f6b40",
+        "type": "ui_toast",
+        "z": "b7dfbe7566583b82",
+        "g": "4e99e5836ef4845f",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "U/I notif",
+        "x": 1600,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "096bbf7003bfdcc9",
+        "type": "ui_template",
+        "z": "b7dfbe7566583b82",
+        "g": "9f17c4bcb0b3fe01",
+        "group": "2bbb488f1a1e1f98",
+        "name": "Tab z RawTelemetria",
+        "order": 1,
+        "width": "12",
+        "height": "15",
+        "format": "<table style=\"\">\n  <tr>\n    <th>Datum</th>\n    <th>Cas</th> \n    <th>Produkt</th>\n    <th>Ks</th>\n    <th>Brutto</th>\n    <th>Netto</th>\n  </tr>\n  <tr ng-repeat=\"x in msg.payload | limitTo:30\">\n    <td>{{msg.payload[$index].datum}}</td>\n    <td>{{msg.payload[$index].cas}}</td> \n    <td>{{msg.payload[$index].produkt}}</td>\n    <td>{{msg.payload[$index].kusov}}</td>\n    <td>{{msg.payload[$index].brutto}}</td>\n    <td>{{msg.payload[$index].netto}}</td>\n  </tr>\n</table>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1080,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cab3be3eac8d64f4",
+        "type": "ui_template",
+        "z": "b7dfbe7566583b82",
+        "g": "9f17c4bcb0b3fe01",
+        "group": "4eac9196c0dff14c",
+        "name": "Notifikacie",
+        "order": 1,
+        "width": "12",
+        "height": "15",
+        "format": "<table style=\"\">\n  <tr>\n    <th>Cas</th>\n    <th>Sprava</th> \n  </tr>\n  <tr ng-repeat=\"x in msg.payload | limitTo:100\">\n    <td>{{msg.payload[$index].Cas}}</td>\n    <td>{{msg.payload[$index].Sprava}}</td>\n  </tr>\n</table>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "Notifikacie",
+        "x": 1050,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac65fd7b44a872cf",
+        "type": "e-mail",
+        "z": "b7dfbe7566583b82",
+        "d": true,
+        "g": "4e99e5836ef4845f",
+        "server": "smtp.unio.sk",
+        "port": "465",
+        "secure": true,
+        "tls": false,
+        "name": "igor.dancik@mim.sk",
+        "dname": "mail",
+        "x": 1590,
+        "y": 140,
+        "wires": [],
+        "info": "noreply@mim.sk\nP0st4D0Firmy"
+    },
+    {
+        "id": "e62f0d1a40c734a5",
+        "type": "serial in",
+        "z": "b7dfbe7566583b82",
+        "name": "Serial in",
+        "serial": "c3f9465f061cb704",
+        "x": 80,
+        "y": 280,
+        "wires": [
+            [
+                "d09c2772736a4ca5"
+            ]
+        ]
+    },
+    {
+        "id": "07da1acdbd010204",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "name": "debug 72",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c2290b747464912a",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "name": "debug 73",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7618be6fad362ff9",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "name": "Serial debug node",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d09c2772736a4ca5",
+        "type": "csv",
+        "z": "b7dfbe7566583b82",
+        "name": "Serial parser",
+        "sep": ";",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "Datum,Cas,Artikel,Sklad,Artikel_PKH,Pocet_ks,Brutto,Tara,Netto,Sarza,Objednavka,Operator",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": true,
+        "include_null_values": true,
+        "x": 110,
+        "y": 360,
+        "wires": [
+            [
+                "7618be6fad362ff9",
+                "0ef874cdebb63e8b"
+            ]
+        ]
+    },
+    {
+        "id": "0ef874cdebb63e8b",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "name": "Raw zo serial portu",
+        "func": "var dd = new Date();\nvar ddtext = dd.toISOString();\n\n\n\nvar id_scale_data = 0;  // autoincrement v Cloude\nvar id_scale = 4;\nvar timestamp = Date.now();\nvar datum = msg.payload[0].Datum;\nvar cas = msg.payload[0].Cas;\nvar produkt = msg.payload[0].Artikel;\nvar sklad = msg.payload[0].Sklad;\nvar artikelPKH = msg.payload[0].Artikel_PKH;\nvar kusov = msg.payload[0].Pocet_ks;\nvar brutto = msg.payload[0].Brutto;\nvar netto = msg.payload[0].Netto ;\nvar tara = msg.payload[0].Tara;\nvar na1 = \"\";\nvar na2 = \"\";\nvar na3 = \"\";\nvar na4 = \"\";\nvar sarza = msg.payload[0].Sarza;\nvar kodProdukt = msg.payload[0].Objednavka;\nvar operator = msg.payload[0].Operator;\n\n// idLoc: ako autoinkrement vyuziva rowid\n\nmsg.topic = \"INSERT INTO VahaData (id_scale_data, id_scale, timestamp, datum, cas, produkt, sklad, artikelPKH, kusov, brutto, netto, tara, na1, na2, na3, na4, sarza, kodProdukt, operator) VALUES( \" +\nid_scale_data + \", \" + \n//idLoc + \", \" + \nid_scale + \", \" + \ntimestamp + \", \" + \n    \"\\\"\" + datum + \"\\\", \" +\n    \"\\\"\" + cas + \"\\\", \" +\n    \"\\\"\" + produkt + \"\\\", \" +\n    \"\\\"\" + sklad + \"\\\", \" +\n    \"\\\"\" + artikelPKH + \"\\\", \" +\nkusov + \", \" + \n    \"\\\"\" + brutto + \"\\\", \" +\n\"\\\"\" + netto + \"\\\", \" +\n\"\\\"\" + tara + \"\\\", \" +\n//brutto + \", \" +\n//netto + \", \" +\n//tara + \", \" +\n    \"\\\"\" + na1 + \"\\\", \" +\n    \"\\\"\" + na2 + \"\\\", \" +\n    \"\\\"\" + na3 + \"\\\", \" +\n    \"\\\"\" + na4 + \"\\\", \" +\n    \"\\\"\" + sarza + \"\\\", \" +\n    \"\\\"\" + kodProdukt + \"\\\", \" +\n    \"\\\"\" + operator + \"\\\"  ); \";\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "0dc4b4c922ddb468",
+                "ae90b90330ab0548",
+                "3f9cfc60d85430a9"
+            ]
+        ]
+    },
+    {
+        "id": "0dc4b4c922ddb468",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "name": "Raw serial port debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a6fcb297b2617c93",
+        "type": "function",
+        "z": "b7dfbe7566583b82",
+        "name": "Zapis uspesny?",
+        "func": "if (typeof msg.payload == 'undefined') \n{ \n  msg.payload = \"CHYBA !\"\n\n} else\n{\n\n  msg.payload = \"OK !\"\n}\n  \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 60,
+        "wires": [
+            [
+                "7b95329fd063c3af",
+                "2cdbf935159509d4"
+            ]
+        ]
+    },
+    {
+        "id": "7b95329fd063c3af",
+        "type": "debug",
+        "z": "b7dfbe7566583b82",
+        "name": "Debug zapis",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "2cdbf935159509d4",
+        "type": "serial out",
+        "z": "b7dfbe7566583b82",
+        "name": "Serial out",
+        "serial": "c3f9465f061cb704",
+        "x": 1100,
+        "y": 60,
+        "wires": []
+    }
+]
